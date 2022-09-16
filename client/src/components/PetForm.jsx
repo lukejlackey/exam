@@ -12,7 +12,7 @@ const PetForm = (props) => {
 
     useEffect(() => {
         if(id){
-            axios.get(`http://localhost:8000/pets/${id}`)
+            axios.get(`http://localhost:8000/api/pets/${id}`)
             .then(res => {
             console.log(res.data.pet);
             setPet(res.data.pet);
@@ -29,10 +29,10 @@ const PetForm = (props) => {
         e.preventDefault();
         (
             submitRoute === 'new'?
-            axios.post("http://localhost:8000/pets/" + submitRoute, {
+            axios.post("http://localhost:8000/api/pets/" + submitRoute, {
             ...pet
             }):
-            axios.put("http://localhost:8000/pets/" + submitRoute, {
+            axios.put("http://localhost:8000/api/pets/" + submitRoute, {
             ...pet
             })
         )            

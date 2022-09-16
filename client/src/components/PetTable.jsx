@@ -9,7 +9,7 @@ const PetTable = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get('http://localhost:8000/pets/all')
+        axios.get('http://localhost:8000/api/pets/all')
             .then(res => {
                 console.log(res);
                 setPets(res.data.pets);

@@ -11,7 +11,7 @@ const ViewPet = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/pets/${id}`)
+        axios.get(`http://localhost:8000/api/pets/${id}`)
         .then(res => {
         console.log(res.data.pet);
         setPet(res.data.pet);
@@ -19,7 +19,7 @@ const ViewPet = () => {
     }, [clicked])
 
     const adopt = () => {
-        axios.delete(`http://localhost:8000/pets/delete/${id}`)
+        axios.delete(`http://localhost:8000/api/pets/delete/${id}`)
             .then(res => {
                 console.log(res);
                 navigate('/')
@@ -30,7 +30,7 @@ const ViewPet = () => {
     const like = () => {
         setPet(Object.assign(pet, {likes : pet.likes? pet.likes + 1 : 1}));
         console.log(pet)
-        axios.put(`http://localhost:8000/pets/edit/${id}`,
+        axios.put(`http://localhost:8000/api/pets/edit/${id}`,
             pet
         )
             .then(res => {
