@@ -23,7 +23,7 @@ const PetTable = () => {
 
     return (
         <div>
-            <Link to='pets/new'>Add an pet</Link>
+            <Link to='/new'>Add an pet</Link>
             <h3>These pets are looking for a good home:</h3>
             <table className='table'>
                 <thead>
