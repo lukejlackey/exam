@@ -13,9 +13,9 @@ function App() {
       <h1>Pet Shelter</h1>
       <Routes>
         <Route path='/' element={<PetTable/>}/>
-        <Route path='/pets/new' element={<NewPet/>}/>
-        <Route path='/pets/:id' element={<ViewPet/>}/>
-        <Route path='/pets/:id/edit' element={<EditPet/>}/>
+        <Route path='/new' element={<NewPet/>}/>
+        <Route path='/:id' element={<ViewPet/>}/>
+        <Route path='/:id/edit' element={<EditPet/>}/>
       </Routes>
     </div>
   );

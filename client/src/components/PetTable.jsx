@@ -44,7 +44,7 @@ const PetTable = () => {
                                     <p>{pet.type}</p>
                                 </td>
                                 <td>
-                                    <Link to={`/pets/${pet._id}`}>details</Link>
+                                    <Link to={`/${pet._id}`}>details</Link>
                                     <button onClick={(e) => handleEditBtn(e, pet._id)}>Edit</button>
                                 </td>
                             </tr>
